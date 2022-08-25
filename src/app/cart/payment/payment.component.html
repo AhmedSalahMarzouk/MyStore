@@ -4,14 +4,14 @@
          
         <div class="form-group">
             <span class="label">Full name</span>
-        <input class="form-control" type="text" name="name" [(ngModel)]="name" placeholder="(minimum 3 characters)"   minlength="3" required #fullName="ngModel">
+        <input class="form-control" type="text" name="name" [(ngModel)]="userdata.fullname" (ngModelChange)="NameChanged($event)" placeholder="(minimum 3 characters)"   minlength="3" required #fullName="ngModel">
         </div>
         
         <span class="form-group">Address</span>
-        <input  class="form-control" type="text" name="address" [(ngModel)]="address" placeholder="(minimum 6 characters)"   minlenght="6" required #addressField="ngModel">
+        <input  class="form-control" type="text" name="address" [(ngModel)]="userdata.address" (ngModelChange)="AddressChanged($event)"  placeholder="(minimum 6 characters)"   minlenght="6" required #addressField="ngModel">
 
         <span class="label">Credit card number</span>
-        <input  class="form-control" type="text" name="creditCard" [(ngModel)]="creditCard" pattern="(\d{4}(\s)?){4}" placeholder="(16-digit number)" minlength="16" required #card="ngModel">
+        <input  class="form-control" type="text" name="creditCard" [(ngModel)]="userdata.creditCard" (ngModelChange)="CreditCardChanged($event)"  pattern="(\d{4}(\s)?){4}" placeholder="(16-digit number)" minlength="16" required #card="ngModel">
 
 
         <button  class="btn btn-primary" type="submit" [disabled]="form.invalid || (this.cartCount$ | async) == 0" (click)="onSubmit()">Submit</button>

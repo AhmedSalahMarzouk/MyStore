@@ -12,10 +12,7 @@ import { Order } from "../../models/Order";
 })
 export class PaymentComponent implements OnInit {
 
-  name: string = "";
-  address: string = "";
-  creditCard: string = "";
- 
+  
  
   userdata: Userdata = new Userdata();
   order: Order = new Order();
@@ -27,16 +24,25 @@ export class PaymentComponent implements OnInit {
     this.cartCount$ = this.cart.count;
   }
 
-  onSubmit(): void {
-    this.userdata.fullname = this.name;
-    this.userdata.address = this.address;
-    this.userdata.creditCard = this.creditCard;
+  onSubmit(): void { 
 
     this.order.products = this.cart.get();
     this.order.userdata = this.userdata;
 
     this.cart.saveOrder(this.order);
     this.router.navigateByUrl("/Confirm");
+  }
+
+  NameChanged(name : string){ 
+    this.userdata.fullname = name;
+  }
+
+  AddressChanged(address : string){ 
+    this.userdata.address = address;
+  }
+
+  CreditCardChanged(creditCard : string){ 
+    this.userdata.creditCard = creditCard;
   }
 
 }
