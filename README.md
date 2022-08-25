@@ -1,6 +1,28 @@
 # MyStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.1.
+
+***project Description ***
+
+it's an app to can allow you 
+
+- choose data from our data.json and choose the quantity you need from any product
+
+- you can show a product detail by click on product image
+
+- you can add product with any quantity to your cart
+
+- you can edit your cart, by change the products quantity or remove product
+
+- confirm your request after fill your required data
+
+
+*** How to Run the project ***
+
+Download the files in this repository
+cd into the directory
+npm install
+ng serve
+The project will be served on default on localhost:4200(or serve on another port)
 
 ## Development server
 
