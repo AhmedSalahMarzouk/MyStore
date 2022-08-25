@@ -18,11 +18,15 @@ it's an app to can allow you
 
 *** How to Run the project ***
 
-Download the files in this repository
-cd into the directory
-npm install
-ng serve
-The project will be served on default on localhost:4200(or serve on another port)
+- Download the files in this repository
+ 
+- cd into the directory
+ 
+- npm install 
+ 
+- ng serve 
+ 
+- The project will be served on default on localhost:4200(or serve on another port)
 
 ## Development server
 
