@@ -1,0 +1,23 @@
+<div class="cart-item-container form-margin">
+    <div class="row cart-item">
+        <div class="col md 4" >
+            <img src="{{ product.url }}" class="img">
+        </div>
+        <div class="col md 8" >
+            <p><span class="product-name">{{ product.name }}</span>
+                <br> <span class="product-price">{{ product.price | currency: "EUR" }}</span></p>
+                 
+                <div class="row">
+                    <span>Amount: </span> <input class="number-input" type="number" min="0" (input)="checkNumbers($event)" [(ngModel)]=product.quantity>
+                </div>
+
+                <div class="clearfix"></div>
+                <button class="btn btn-danger" (click)="removeFromCart(product)">remove</button>
+           
+     
+        </div>
+        
+    </div>
+    <br>
+    
+</div>

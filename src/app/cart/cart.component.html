@@ -1,0 +1,20 @@
+ 
+<div class="cart-container">
+    
+ 
+    <div>
+
+        <ul>
+            <app-cart-item *ngFor="let product of products$ | async" [product]="product" (removeItemFromCart)="removeCartItem($event)"></app-cart-item>
+        </ul>
+        <b class="total-price" *ngIf="sum$ | async">Total: {{ (sum$ | async) | currency: "$" }}</b>
+        <b class="empty-cart-message" *ngIf="!(sum$ | async)">the cart is empty</b>&nbsp;&nbsp;&nbsp;
+    
+    </div>
+     
+
+    <div>
+        <app-payment></app-payment>
+    </div>
+    
+</div>

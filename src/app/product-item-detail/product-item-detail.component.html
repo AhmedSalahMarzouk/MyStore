@@ -1,0 +1,30 @@
+<form class="detail-container">
+    <div id="product-details-view" >
+        <img class="img" src="{{ product.url }}">
+    </div>
+    <div class="detail-item">
+        
+        <h2> {{ product.name }}</h2>
+        
+        <p class="price">{{ product.price | currency: "$" }}</p>
+        <p class="product-description">{{ product.description }}</p>
+
+        <select name="quantity" class="select-input"  (change)="setQuantity($event)">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        <br>
+        <button  class="btn btn-primary"  (click)="addToCart()">Add to cart</button>
+        <br>
+        <a class="back-link" routerLink="/"> Back to product list</a>
+        <span #cartSuccess>✓</span>
+    </div>
+</form>

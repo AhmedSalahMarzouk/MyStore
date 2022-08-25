@@ -1,0 +1,16 @@
+#checkout-form-container, form {
+    display: flex;
+    flex-direction: column;
+    width: clamp(300px, 25vw, 500px);
+    margin: 0 auto;
+}
+
+input {
+    margin: 0.5rem auto;
+    width: 75%;
+}
+
+button {
+    width: min-content;
+    margin: 0.5rem auto;
+}

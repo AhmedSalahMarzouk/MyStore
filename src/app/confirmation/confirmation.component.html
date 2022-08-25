@@ -1,0 +1,29 @@
+ 
+<div class="confirmation-container">
+
+
+<div class="confirmation-items">
+    <div  class="confirmation-header">
+        <h2 >Success!</h2>
+    </div>
+
+     <div class="confirmation-item">
+
+        <p>Thank you, <b>{{ order.userdata.fullname }}</b>!</p>
+     </div>
+
+    <div class="confirmation-item">
+      <p>Your <b>{{ total | currency: "$" }} </b> order  is confirmed.</p>
+    </div>
+
+    <div class="confirmation-item">
+        please allow 1-3 business day(s) for shipping
+      </div>
+
+      <div class="confirmation-item">
+        <a routerLink="" class="btn btn-primary">Back to product list</a>
+      </div>
+
+</div>
+
+</div>
