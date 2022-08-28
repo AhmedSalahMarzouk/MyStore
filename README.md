@@ -3,7 +3,7 @@
 
 ***project Description ***
 
-it's an app to can allow you 
+it's E-Commerce app to can allow you 
 
 - choose data from our data.json and choose the quantity you need from any product
 
